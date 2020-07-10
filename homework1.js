@@ -134,4 +134,16 @@
 
 
 //task 6 
+let enteredData;
+let total = 0;
+let input = prompt(`Введите подходящее число`);
+while (input >= 0){
+    alert(`Введите подходящее число`);
+   if (enteredData >= 0) {
+       alert(`Введите ещё одно число`)
+   } else {
+       alert(`Общая сумма чисел равна ${input}`)
+   }
+}
+
 
