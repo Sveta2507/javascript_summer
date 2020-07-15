@@ -112,41 +112,64 @@
 // }
 //........................................................................
 
-let enteredData = prompt("Введите кол-во дроидов, которые вы хотите заказать");
-if (enteredData <= 0){
-    alert(`Введенные данные не являются допустимыми`); 
-} else if (enteredData > 7) {
-    alert(`Недостаточно средств на счету`);
-}  
-//0else if (enteredData == 0) {
+// let enteredData = prompt("Введите кол-во дроидов, которые вы хотите заказать");
+// if (enteredData <= 0){
+//     alert(`Введенные данные не являются допустимыми`); 
+// } else if (enteredData > 7) {
+//     alert(`Недостаточно средств на счету`);
+// }  
+//else if (enteredData == 0) {
 //     alert("Отменено пользователем");
 // }
-switch(enteredData) {
-    case "1": 
-    alert(`Вы купили 1 дроид, на счету осталось 20580 кредитов`);
-    break;
-    case "2":
-    console.log(`Вы купили 2 дроида, на счету осталось 17580 кредитов`);
-    break;
-    case "3":
-    alert("Вы купили 3 дроида, на счету осталось 14580 кредитов");
-    break;
-    case "4":
-    alert("Вы купили 4 дроида, на счету осталось 11580 кредитов");
-    break;
-    case "5":
-    alert("Вы купили 5 дроидов, на счету осталось 8580 кредитов");
-    break;
-    case "6":
-    alert("Вы купили 6 дроидов, на счету осталось 5580 кредитов");
-    break;
-    case "7":
-    alert("Вы купили 7 дроидов, на счету осталось 2580 кредитов");
-    break;
+
+
+// switch(enteredData) {
+//     case "1": 
+//     alert(`Вы купили 1 дроид, на счету осталось 20580 кредитов`);
+//     break;
+//     case "2":
+//     console.log(`Вы купили 2 дроида, на счету осталось 17580 кредитов`);
+//     break;
+//     case "3":
+//     alert("Вы купили 3 дроида, на счету осталось 14580 кредитов");
+//     break;
+//     case "4":
+//     alert("Вы купили 4 дроида, на счету осталось 11580 кредитов");
+//     break;
+//     case "5":
+//     alert("Вы купили 5 дроидов, на счету осталось 8580 кредитов");
+//     break;
+//     case "6":
+//     alert("Вы купили 6 дроидов, на счету осталось 5580 кредитов");
+//     break;
+//     case "7":
+//     alert("Вы купили 7 дроидов, на счету осталось 2580 кредитов");
+//     break;
+
+
     // default:
     // alert(`Недостаточно средств на счету`);
     // break; 
-}
+//=================================================================
+
+
+// let credits = 23588 ; 
+// const pricePerDroid = 3000; 
+// const numberDroids = +prompt("Введите кол-во дроидов, которые Вы хотите заказать"); 
+// console.log(typeof numberDroids);
+// if(numberDroids == 0){ 
+//     alert("Отменено пользователем"); 
+// } else {
+//     const Totalvalue = pricePerDroid + numberDroids; 
+//     if(Totalvalue > credits) { 
+//     alert("Недостаточно средств на счету");
+//     } else {
+//     credits = credits - Totalvalue; 
+//     alert("Вы купили "  +numberDroids+  "дроидов, на вашем счету осталось"  +credits+  "кредитов");
+//     }
+// }
+
+
 
 
 //task 5
@@ -175,15 +198,18 @@ switch(enteredData) {
 
 
 
-// //task 6 
-// let enteredData;
-// let total = 0;
-// let input = prompt(`Введите подходящее число`);
-// while (input >= 0){
-//     alert(`Введите подходящее число`);
-//    if (enteredData >= 0) {
-//        alert(`Введите ещё одно число`)
-//    } else {
-//        alert(`Общая сумма чисел равна ${input}`)
-//    }
-// 
+//task 6 
+let total = 0;
+let input = confirm(`Введите подходящее число`);
+// while (input) {
+//     input = +prompt(`Введите подходящее число`);
+//     total = total + input;
+//     console.log(total);
+// }
+
+do { 
+    input = +prompt(`Введите подходящее число`);
+    total = total + input;
+    console.log(total);
+} while (input);
+alert(total);
