@@ -116,34 +116,42 @@
 
 
 //task 5
-// let enteredData = prompt(`Введите страну, в которой вы проживаете, чтобы оформить доставку`);
-// if (enteredData = "China") {
-//     alert(`Delivery into ${enteredData} will cost 100 credits`);
-// } else if (enteredData = "Chili") {
-//     alert(`Delivery into ${enteredData} will cost 250 credits`);
-// } else if (enteredData = "Australia") {
-//     alert(`Delivery into ${enteredData} will cost 170 credits`);
-// } else if (enteredData = "India") {
-//     alert(`Delivery into ${enteredData} will cost 80 credits`);
-// } else if (enteredData = "Jamaica") {
-//     alert(`Delivery into ${enteredData} will cost 120 credits`);
-// } else {
-//     alert(`Delivery is unable in your country`);
+
+// let enteredData = prompt("Введите страну, в которой вы проживаете, чтобы оформить доставку").toUpperCase();
+// switch(enteredData) {
+//     case "CHINA": 
+//     alert(`Delivery into China will cost 100 credits`);
+//     break;
+//     case "CHILI":
+//     console.log(`Delivery into Chili will cost 250 credits`);
+//     break;
+//     case "AUSTRALIA":
+//     alert("Delivery into Australia will cost 170 credits");
+//     break;
+//     case "INDIA":
+//     alert("Delivery into India will cost 80 credits");
+//     break;
+//     case "Jamaica":
+//     alert("Delivery into Jamaica will cost 120 credits");
+//     break;
+//     default:
+//         alert(`Delivery is unable in your country`);
+//         break;
 // }
 
 
 
-//task 6 
-let enteredData;
-let total = 0;
-let input = prompt(`Введите подходящее число`);
-while (input >= 0){
-    alert(`Введите подходящее число`);
-   if (enteredData >= 0) {
-       alert(`Введите ещё одно число`)
-   } else {
-       alert(`Общая сумма чисел равна ${input}`)
-   }
-}
+// //task 6 
+// let enteredData;
+// let total = 0;
+// let input = prompt(`Введите подходящее число`);
+// while (input >= 0){
+//     alert(`Введите подходящее число`);
+//    if (enteredData >= 0) {
+//        alert(`Введите ещё одно число`)
+//    } else {
+//        alert(`Общая сумма чисел равна ${input}`)
+//    }
+// }
 
 
