@@ -151,7 +151,7 @@ switch(enteredData) {
 
 //task 5
 
-// let enteredData = prompt("Введите страну, в которой вы проживаете, чтобы оформить доставку").toUpperCase();
+// let enteredData = prompt("Type the country you live in to arrange delivery").toUpperCase();
 // switch(enteredData) {
 //     case "CHINA": 
 //     alert(`Delivery into China will cost 100 credits`);
