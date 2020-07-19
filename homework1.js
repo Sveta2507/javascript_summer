@@ -46,7 +46,7 @@
 // if(numberDroids == 0){ 
 //     alert("Отменено пользователем"); 
 // } else {
-//     const Totalvalue = pricePerDroid + numberDroids; 
+//     let Totalvalue = pricePerDroid * numberDroids; 
 //     if(Totalvalue > credits) { 
 //         alert("Недостаточно средств на счету");
 //     } else {
@@ -68,7 +68,7 @@
 //     alert(`Delivery into China will cost 100 credits`);
 //     break;
 //     case "CHILI":
-//     console.log(`Delivery into Chili will cost 250 credits`);
+//     alert(`Delivery into Chili will cost 250 credits`);
 //     break;
 //     case "AUSTRALIA":
 //     alert("Delivery into Australia will cost 170 credits");
