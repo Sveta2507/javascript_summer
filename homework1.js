@@ -1,3 +1,4 @@
+// module 1
 //task 1
 // let name="Генератор защитного поля";
 // let price=1000;
@@ -102,3 +103,150 @@
 // } while (input);
 // alert(total);
  
+
+
+
+// module 2
+//task 1
+const logItems = function(array) {
+    // твой код
+  };
+  
+  /*
+   * Вызовы функции для проверки работоспособности твоей реализации.
+   */
+  logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+  
+  logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+
+// task 2
+
+
+//task 3
+
+
+//task 4
+// const formatString = function(string) {
+//     // твой код
+//     const formatString = function (string) { 
+//         if (string.length < 40) return string; 
+//         return string.slice(0, 40) + "...";
+//   };
+  
+//   /*
+//    * Вызовы функции для проверки работоспособности твоей реализации.
+//    */
+//   console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+//   // вернется оригинальная строка
+  
+//   console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+//   // вернется форматированная строка
+  
+//   console.log(formatString('Curabitur ligula sapien.'));
+//   // вернется оригинальная строка
+  
+//   console.log(
+//     formatString(
+//       'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+//     ),
+//   );
+  // вернется форматированная строка
+
+
+
+
+
+//task 5
+// const checkForSpam = function(message) {
+//     message = message.toLowerCase();
+//     if (message.includes('spam') || message.includes("sale")) return true;
+
+//     return false;
+    // твой код
+//   };
+  
+  /*
+   * Вызовы функции для проверки работоспособности твоей реализации.
+   */
+//   console.log(checkForSpam('Latest technology news')); // false
+  
+//   console.log(checkForSpam('JavaScript weekly newsletter')); // false
+  
+//   console.log(checkForSpam('Get best sale offers now!')); // true
+  
+//   console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+
+
+
+//task 6
+// let input = confirm(); 
+// const numbers = [];
+// let total = 0; 
+// while (input) { 
+//     input = prompt("Введите число"); 
+//     if (isNaN(input)) { 
+//         alert("Вы ввели не число"); 
+//         continue; 
+//     }
+//     if (input === null) { 
+//         if (numbers.length > 0) { 
+//             for (let num of numbers) { 
+//                 total += num; 
+//             }
+//             console.log(`Общая сумма чисел равна ${total}`);
+//         } else { 
+//             alert("Было введено не число, попробуйте еще раз"); 
+//         }    
+//     }
+//     numbers.push(+input);
+// }
+
+
+
+//task 7
+const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+
+const isLoginValid = function(login) {
+  // твой код  
+  if (login.length >= 4 && login.length <= 16) return true;
+  return false;
+};
+
+const isLoginUnique = function(allLogins, login) {
+  // твой код
+
+  for (let loginelm of allLogins) {
+      if (loginelm === logins) return false;
+          console.log("Такой логин уже используется!");
+        }
+        return true;
+    };
+    
+let msg;
+const addLogin = function(allLogins, login) {
+    let validLogin = isLoginValid(login);
+    console.log(validLogin);
+    let uniqueLogin = isLoginUnique(allLogins, login);
+    console.log(uniqueLogin);
+  // твой код
+    if (!validLogin) {
+        msg = "Ошибка! Логин должен быть от 4 до 16 символов";    
+    } else {
+    if (!uniqueLogin) {
+        msg = "Такой логин уже используется!";
+    } else {
+        allLogins.push(login);
+        msg = "Логин успешно добавлен!";
+        }
+    }
+    return msg;
+};
+
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
+console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
+console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
