@@ -87,126 +87,126 @@
 
 // функции
 // funtction expression - нельзя вызывать до объявления
-const func = function (a, b) {
-    return a + b;
-}
-console.log(func(2, 3)); // 2 + 3 = 5
+// const func = function (a, b) {
+//     return a + b;
+// }
+// console.log(func(2, 3)); // 2 + 3 = 5
 
-// arrow function - нельзя вызывать до объявления
-const func1 = (a, b) => a - b;
-console.log(func1(9, 8)); // 9 - 8 = 1
+// // arrow function - нельзя вызывать до объявления
+// const func1 = (a, b) => a - b;
+// console.log(func1(9, 8)); // 9 - 8 = 1
 
-const func2 = c => console.log(c);
-func2("Hello world");
+// const func2 = c => console.log(c);
+// func2("Hello world");
 
-// function declaration - можно вызвать перед объявлением
-function decl (par1, par2) {
-    return console.log(par1 * par2);
-}
-decl(3, 4); // 3 * 4 = 12
+// // function declaration - можно вызвать перед объявлением
+// function decl (par1, par2) {
+//     return console.log(par1 * par2);
+// }
+// decl(3, 4); // 3 * 4 = 12
 
-// параметры по умолчанию
-const toBuyProducts = function (product = 'milk', count = 1) {
-    return console.log(` I bought ${count} of ${product}`)
-}
-toBuyProducts('bread', 8);
-toBuyProducts(8, 'bread');
-toBuyProducts(8); //count undefined
-toBuyProducts('apples');
-toBuyProducts();
+// // параметры по умолчанию
+// const toBuyProducts = function (product = 'milk', count = 1) {
+//     return console.log(` I bought ${count} of ${product}`)
+// }
+// toBuyProducts('bread', 8);
+// toBuyProducts(8, 'bread');
+// toBuyProducts(8); //count undefined
+// toBuyProducts('apples');
+// toBuyProducts();
 
-// псевдомассив arguments
-const total = function () {
-    let sum = 0;
-    for (const argument of arguments) {
-        sum += argument;
-    }
-    return sum;
-}
-console.log(total(2, 6)); //8
-console.log(total(7, 89, 8, 5)); //109
+// // псевдомассив arguments
+// const total = function () {
+//     let sum = 0;
+//     for (const argument of arguments) {
+//         sum += argument;
+//     }
+//     return sum;
+// }
+// console.log(total(2, 6)); //8
+// console.log(total(7, 89, 8, 5)); //109
 
-const total1 = (...args) => {
-    console.log(args);
-    let total = 0;
-    for (const arg of args) {
-        total += arg;
-    }
-    console.log(total);
-}
-total1(1, 2, 3);
+// const total1 = (...args) => {
+//     console.log(args);
+//     let total = 0;
+//     for (const arg of args) {
+//         total += arg;
+//     }
+//     console.log(total);
+// }
+// total1(1, 2, 3);
  
-// преобразовние псевдомассивов arguments в нормальный массив
-// в arguments нет многих свойств
-const func3 = function() {
-const array = [1,2,3];
-console.log("обычный массив", array);
-console.log("Псевдомассив", arguments);
-const newArray = Array.from(arguments);
-console.log("Преобразованный массив", newArray);
-}
-func3(1,2,3);
+// // преобразовние псевдомассивов arguments в нормальный массив
+// // в arguments нет многих свойств
+// const func3 = function() {
+// const array = [1,2,3];
+// console.log("обычный массив", array);
+// console.log("Псевдомассив", arguments);
+// const newArray = Array.from(arguments);
+// console.log("Преобразованный массив", newArray);
+// }
+// func3(1,2,3);
 
-// guard clause
-const addNewUser = function (age) {
-    if (age < 16 || age > 21) {
-        console.log('Мы не можем Вас добавить');
-    } else if ( age >= 16 && age <= 22) {
-        console.log("Поздравляем! Вы студент!");
-    } else {
-        console.log("Вы ввели неправилтные данные");
-    }
-};
-addNewUser(15);
-addNewUser(32);
-addNewUser(18);
-addNewUser("Hello");
+// // guard clause
+// const addNewUser = function (age) {
+//     if (age < 16 || age > 21) {
+//         console.log('Мы не можем Вас добавить');
+//     } else if ( age >= 16 && age <= 22) {
+//         console.log("Поздравляем! Вы студент!");
+//     } else {
+//         console.log("Вы ввели неправилтные данные");
+//     }
+// };
+// addNewUser(15);
+// addNewUser(32);
+// addNewUser(18);
+// addNewUser("Hello");
 
-const addNewUser1 =  function (age) {
-    if (age < 16 || age > 21) {
-        return console.log("Мы не можем Вас добавить");
-    }
-    if ( age >= 16 && age <= 22) {
-        return console.log("Поздравляем! Вы студент!");
-    }
-    console.log("Вы ввели неправилтные данные");
-};
+// const addNewUser1 =  function (age) {
+//     if (age < 16 || age > 21) {
+//         return console.log("Мы не можем Вас добавить");
+//     }
+//     if ( age >= 16 && age <= 22) {
+//         return console.log("Поздравляем! Вы студент!");
+//     }
+//     console.log("Вы ввели неправилтные данные");
+// };
 
-const fourthfunction = function () {
-    console.log("Начало выполнения функции 1");
-    console.log("Окончание выполнения функции 1");
-}
-const firstfunction = function () {
-    console.log("Начало выполнения функции 2");
-    firstfunction();
-    console.log("Окончание выполнения функции 2");
-}
-const secondfunction = function () {
-    console.log("Начало выполнения функции 3");
-    secondfunction();
-    console.log("Окончание выполнения функции 3");
-}
-const thirdfunction = function () {
-    console.log("Начало выполнения функции 4");
-    thirdfunction();
-    console.log("Окончание выполнения функции 4");
-};
-fourthfunction();
+// const fourthfunction = function () {
+//     console.log("Начало выполнения функции 1");
+//     console.log("Окончание выполнения функции 1");
+// }
+// const firstfunction = function () {
+//     console.log("Начало выполнения функции 2");
+//     firstfunction();
+//     console.log("Окончание выполнения функции 2");
+// }
+// const secondfunction = function () {
+//     console.log("Начало выполнения функции 3");
+//     secondfunction();
+//     console.log("Окончание выполнения функции 3");
+// }
+// const thirdfunction = function () {
+//     console.log("Начало выполнения функции 4");
+//     thirdfunction();
+//     console.log("Окончание выполнения функции 4");
+// };
+// fourthfunction();
 
-const mainfunc = function (a, b, c) {
-    console.log(a());
-    console.log(b());
-    console.log(c());
-}
-const toGo = function() {
-    console.log("I am going");
-}
+// const mainfunc = function (a, b, c) {
+//     console.log(a());
+//     console.log(b());
+//     console.log(c());
+// }
+// const toGo = function() {
+//     console.log("I am going");
+// }
 
-const toRun = function() {
-    console.log("I am running");
-}
+// const toRun = function() {
+//     console.log("I am running");
+// }
 
-const toJump = function() {
-    console.log("I am jumping");
-}
-mainfunc(toGo, toRun, toJump);
+// const toJump = function() {
+//     console.log("I am jumping");
+// }
+// mainfunc(toGo, toRun, toJump);
