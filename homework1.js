@@ -107,23 +107,82 @@
 
 
 // module 2
-//task 1
-const logItems = function(array) {
-    // твой код
-  };
+//task 1 
+// const logItems = function(array) {
+//     // твой код
+//     for (let i = 0; i < logItems.length; i += 1) {
+//       console.log( `1 -` , 'Mango');
+//       }
+//     for (let i = 0; i < logItems.length; i += 1) {
+//       console.log( `2 -` , 'Poly');
+//       }
+//     for (let i = 0; i < logItems.length; i += 1) {
+//       console.log( `3 -` , 'Ajax');
+//       } 
+//   };
   
-  /*
-   * Вызовы функции для проверки работоспособности твоей реализации.
-   */
-  logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+//   /*
+//    * Вызовы функции для проверки работоспособности твоей реализации.
+//    */
+//   logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
   
-  logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+//   logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+
 
 
 // task 2
+// const calculateEngravingPrice = function(message, pricePerWord) {
+//   // твой код
+//   if (message.length < 80 && pricePerWord < 80) return message; 
+//   return message.slice(0, 80) + "...";
+
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(
+//   calculateEngravingPrice(
+//     'Proin sociis natoque et magnis parturient montes mus',
+//     10,
+//   ),
+// ); // 80
+
+// console.log(
+//   calculateEngravingPrice(
+//     'Proin sociis natoque et magnis parturient montes mus',
+//     20,
+//   ),
+// ); // 160
+
+// console.log(
+//   calculateEngravingPrice('Donec orci lectus aliquam est magnis', 40),
+// ); // 240
+
+// console.log(
+//   calculateEngravingPrice('Donec orci lectus aliquam est magnis', 20),
+// ); // 120
 
 
-//task 3
+
+
+// //task 3
+// const findLongestWord = function(string) {
+//   // твой код
+//   // if (string.length >= 5);
+//   return string.slice(20, 26, 0, 5, 9, 14);
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+
+// console.log(findLongestWord('Google do a roll')); // 'Google'
+
+// console.log(findLongestWord('May the force be with you')); // 'force'
+
 
 
 //task 4
@@ -204,49 +263,49 @@ const logItems = function(array) {
 
 
 
-//task 7
-const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+// //task 7
+// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-const isLoginValid = function(login) {
-  // твой код  
-  if (login.length >= 4 && login.length <= 16) return true;
-  return false;
-};
+// const isLoginValid = function(login) {
+//   // твой код  
+//   if (login.length >= 4 && login.length <= 16) return true;
+//   return false;
+// };
 
-const isLoginUnique = function(allLogins, login) {
-  // твой код
+// const isLoginUnique = function(allLogins, login) {
+//   // твой код
 
-  for (let loginelm of allLogins) {
-      if (loginelm === logins) return false;
-          console.log("Такой логин уже используется!");
-        }
-        return true;
-    };
+//   for (let loginelm of allLogins) {
+//       if (loginelm === logins) return false;
+//           console.log("Такой логин уже используется!");
+//         }
+//         return true;
+//     };
     
-let msg;
-const addLogin = function(allLogins, login) {
-    let validLogin = isLoginValid(login);
-    console.log(validLogin);
-    let uniqueLogin = isLoginUnique(allLogins, login);
-    console.log(uniqueLogin);
-  // твой код
-    if (!validLogin) {
-        msg = "Ошибка! Логин должен быть от 4 до 16 символов";    
-    } else {
-    if (!uniqueLogin) {
-        msg = "Такой логин уже используется!";
-    } else {
-        allLogins.push(login);
-        msg = "Логин успешно добавлен!";
-        }
-    }
-    return msg;
-};
+// let msg;
+// const addLogin = function(allLogins, login) {
+//     let validLogin = isLoginValid(login);
+//     console.log(validLogin);
+//     let uniqueLogin = isLoginUnique(allLogins, login);
+//     console.log(uniqueLogin);
+//   // твой код
+//     if (!validLogin) {
+//         msg = "Ошибка! Логин должен быть от 4 до 16 символов";    
+//     } else {
+//     if (!uniqueLogin) {
+//         msg = "Такой логин уже используется!";
+//     } else {
+//         allLogins.push(login);
+//         msg = "Логин успешно добавлен!";
+//         }
+//     }
+//     return msg;
+// };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
-console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
-console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
+// console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
+// console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
