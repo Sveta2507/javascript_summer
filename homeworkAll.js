@@ -319,46 +319,25 @@
 //   }
 // };
 
-// console.log(user);
-// console.log(user.name);
-// console.log(user.age);
-// console.log(user.hobby);
-// console.log(user.premium);
-// console.log(user.mood);
-// user.toShowKeys();
 // user.mood = "happy";
-// user.toShowKeys();
 // user.hobby = "skydiving";
-// user.toShowKeys();
 // user.premium = "false";
-// user.toShowKeys();
 
 // const keys = Object.keys(user);
 
 // for (const key of keys) {
-//   console.log('Value: ', user[key]);
+//   console.log(`${key}: ${user[key]}`);
 // }
 
 
 //task 2
 
 // const countProps = function(obj) {
-//   // твой код
-//   name = "Mango";
-//   age = 2;
-//   mail = 'poly@mail.com';
-//   isOnline = true;
-//   score = 500;
+//   const keys = Object.keys(obj);
+//   // console.log(keys);
+// return keys.length;
 // };
-// const values = Object.values(countProps);
 
-// let total = 0;
-
-// for (const value of values) {
-//   total += countProps;
-// }
-
-// console.log(total);
 
 // /*
 //  * Вызовы функции для проверки работоспособности твоей реализации.
@@ -375,8 +354,16 @@
 //task 3
 
 // const findBestEmployee = function(employees) {
-//   // твой код
-
+//   const entries = Object.entries(employees);
+//   let workScore = entries[0][1];
+//   let name = entries[0][0];
+//   for (let i = 0; i < entries.length; i++) {
+//     if (workScore < entries[i][1]) {
+//       workScore = entries[i][1];
+//       name = entries[i][0];
+//     }
+//   }
+//   return `${name} : ${workScore}`;
 // }
 
 // /*
@@ -413,34 +400,13 @@
 //task 4
 
 // const countTotalSalary = function(employees) {
-//   // твой код
-// };
-
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
-// console.log(countTotalSalary({})); // 0
-
-// console.log(
-//   countTotalSalary({
-//     mango: 100,
-//     poly: 150,
-//     alfred: 80,
-//   }),
-// ); // 330
-
-// console.log(
-//   countTotalSalary({
-//     kiwi: 200,
-//     lux: 50,
-//     chelsy: 150,
-//   }),
-// ); // 400
-
-// //task 5
-
-// const countTotalSalary = function(employees) {
-//   // твой код
+// let values = Object.values(employees);
+// // console.log(values);
+// let total = 0;
+// for (let val of values) {
+//   total += val;
+// }
+// return total;
 // };
 
 // /*
@@ -475,16 +441,11 @@
 // ];
 
 // const calculateTotalPrice = function(allProdcuts, productName) {
-//   // твой код
-//   const values = Object.values(products);
-
-// let total = 0;
-
-// for (const value of values) {
-//   total += value;
-// }
-
-// console.log(total); // 20
+//   for (let obj of allProdcuts) {
+//     if (obj.name === productName) {
+//       return obj.price * obj.quantity;
+//     }
+//   }
 // };
 
 // /*
@@ -501,60 +462,113 @@
  * Типов транзацкий всего два.
  * Можно положить либо снять деньги со счета.
  */
-// const Transaction = {
-//   DEPOSIT: 'deposit',
-//   WITHDRAW: 'withdraw',
-// };
+const Transaction = {
+  DEPOSIT: 'deposit',
+  WITHDRAW: 'withdraw',
+};
 
-// /*
-//  * Каждая транзакция это объект со свойствами: id, type и amount
-//  */
+/*
+ * Каждая транзакция это объект со свойствами: id, type и amount
+ */
 
-// const account = {
-//   // Текущий баланс счета
-//   balance: 0,
+const account = {
+  // Текущий баланс счета
+  id: 0,
+  balance: 0,
 
-//   // История транзакций
-//   transactions: [],
+  // История транзакций
+  transactions: [],
 
-//   /*
-//    * Метод создает и возвращает объект транзакции.
-//    * Принимает сумму и тип транзакции.
-//    */
-//   createTransaction(amount, type) {},
+  /*
+   * Метод создает и возвращает объект транзакции.
+   * Принимает сумму и тип транзакции.
+   */
+  createTransaction(amount, type) {
+    this.id += 1;
+    return {
+      id: this.id,
+      amount: amount,
+      type: type,
+    }
+  },
 
-//   /*
-//    * Метод отвечающий за добавление суммы к балансу.
-//    * Принимает сумму танзакции.
-//    * Вызывает createTransaction для создания объекта транзакции
-//    * после чего добавляет его в историю транзакций
-//    */
-//   deposit(amount) {},
+  /*
+   * Метод отвечающий за добавление суммы к балансу.
+   * Принимает сумму танзакции.
+   * Вызывает createTransaction для создания объекта транзакции
+   * после чего добавляет его в историю транзакций
+   */
+  deposit(amount) {
+    this.balance += amount;
+    let newTransaction = this.createTransaction(amount, Transaction.DEPOSIT)
+    this.transactions.push(newTransaction);
+  },
 
-//   /*
-//    * Метод отвечающий за снятие суммы с баланса.
-//    * Принимает сумму танзакции.
-//    * Вызывает createTransaction для создания объекта транзакции
-//    * после чего добавляет его в историю транзакций.
-//    *
-//    * Если amount больше чем текущий баланс, выводи сообщение
-//    * о том, что снятие такой суммы не возможно, недостаточно средств.
-//    */
-//   withdraw(amount) {},
+  /*
+   * Метод отвечающий за снятие суммы с баланса.
+   * Принимает сумму танзакции.
+   * Вызывает createTransaction для создания объекта транзакции
+   * после чего добавляет его в историю транзакций.
+   *
+   * Если amount больше чем текущий баланс, выводи сообщение
+   * о том, что снятие такой суммы не возможно, недостаточно средств.
+   */
+  withdraw(amount) {
+    if (this.balance < amount) {
+      alert("У Вас не достаточно денег");
+    } else {
+      this.balance -= amount;
+      let newTransaction = this.createTransaction(amount, Transaction.WITHDRAW)
+      this.transactions.push(newTransaction);
+    }
+  },
 
-//   /*
-//    * Метод возвращает текущий баланс
-//    */
-//   getBalance() {},
+  /*
+   * Метод возвращает текущий баланс
+   */
+  getBalance() {
+    return this.balance;
+  },
 
-//   /*
-//    * Метод ищет и возвращает объект транзации по id
-//    */
-//   getTransactionDetails(id) {},
+  /*
+   * Метод ищет и возвращает объект транзации по id
+   */
+  getTransactionDetails(id) {
+    for (let transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+  },
 
-//   /*
-//    * Метод возвращает количество средств
-//    * определенного типа транзакции из всей истории транзакций
-//    */
-//   getTransactionTotal(type) {},
-// };
+  /*
+   * Метод возвращает количество средств
+   * определенного типа транзакции из всей истории транзакций
+*/
+getTransactionTotal(type) {
+  let total = 0;
+  for (let transaction of this.transactions) {
+    if (transaction.type === type) {
+      total += transaction.amoumt;
+    }
+  }
+  return total;
+},
+};
+
+account.deposit(60);
+console.log(account.getBalance());
+console.log(account.transactions);
+account.deposit(100);
+account.deposit(200);
+account.deposit(300);
+account.deposit(400);
+account.deposit(500);
+account.deposit(600);
+console.log(account.getBalance());
+console.log(account.transactions);
+
+account.withdraw(3000);
+console.log(account.getBalance());
+console.log(account.transactions);
+console.log(account.getTransactionDetails(5));
