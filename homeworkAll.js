@@ -110,15 +110,9 @@
 //task 1 
 // const logItems = function(array) {
 //     // твой код
-//     for (let i = 0; i < logItems.length; i += 1) {
-//       console.log( `1 -` , 'Mango');
+//     for (let i = 0; i < array.length; i += 1) {
+//       console.log(`${i+1} - ${array[i]}`);
 //       }
-//     for (let i = 0; i < logItems.length; i += 1) {
-//       console.log( `2 -` , 'Poly');
-//       }
-//     for (let i = 0; i < logItems.length; i += 1) {
-//       console.log( `3 -` , 'Ajax');
-//       } 
 //   };
   
 //   /*
@@ -133,10 +127,12 @@
 
 // task 2
 // const calculateEngravingPrice = function(message, pricePerWord) {
-//   // твой код
-//   if (message.length < 80 && pricePerWord < 80) return message; 
-//   return message.slice(0, 80) + "...";
+// // let arr = message.split(" ");
+// // let count = arr.length;
+// // let totalPrice = count * pricePerWord;
 
+// // return totalPrice;
+// return totalPrice = message.split(" ").length * pricePerWord;
 // };
 
 // /*
@@ -169,9 +165,16 @@
 
 // //task 3
 // const findLongestWord = function(string) {
-//   // твой код
-//   // if (string.length >= 5);
-//   return string.slice(20, 26, 0, 5, 9, 14);
+//   let arr = string.split(" ");
+//   // console.log(arr);
+//   let longestWord = arr[0];
+//   for (let i = 1; i < arr.length; i++ ) {
+//     // console.log(arr[i]);
+//     if (longestWord.length < arr[i].length) {
+//       longestWord = arr[i];
+//   }
+// }
+// return longestWord;
 // };
 
 // /*
@@ -188,7 +191,7 @@
 //task 4
 // const formatString = function(string) {
 //     // твой код
-//         if (string.length < 40) return string; 
+//         if (string.length <= 40) return string; 
 //         return string.slice(0, 40) + "...";
 //   };
   
@@ -209,7 +212,7 @@
 //       'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
 //     ),
 //   );
-  // вернется форматированная строка
+//   // вернется форматированная строка
 
 
 
@@ -221,19 +224,18 @@
 //     if (message.includes('spam') || message.includes("sale")) return true;
 
 //     return false;
-    // твой код
 //   };
   
-  /*
-   * Вызовы функции для проверки работоспособности твоей реализации.
-   */
-//   console.log(checkForSpam('Latest technology news')); // false
+//   /*
+//    * Вызовы функции для проверки работоспособности твоей реализации.
+//    */
+// console.log(checkForSpam('Latest technology news')); // false
+
+// console.log(checkForSpam('JavaScript weekly newsletter')); // false
   
-//   console.log(checkForSpam('JavaScript weekly newsletter')); // false
+// console.log(checkForSpam('Get best sale offers now!')); // true
   
-//   console.log(checkForSpam('Get best sale offers now!')); // true
-  
-//   console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+// console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 
 
 
@@ -265,18 +267,14 @@
 // //task 7
 // const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-// const isLoginValid = function(login) {
-//   // твой код  
+// const isLoginValid = function(login) { 
 //   if (login.length >= 4 && login.length <= 16) return true;
 //   return false;
 // };
 
 // const isLoginUnique = function(allLogins, login) {
-//   // твой код
-
 //   for (let loginelm of allLogins) {
-//       if (loginelm === logins) return false;
-//           console.log("Такой логин уже используется!");
+//       if (loginelm === login) return false;
 //         }
 //         return true;
 //     };
@@ -284,10 +282,7 @@
 // let msg;
 // const addLogin = function(allLogins, login) {
 //     let validLogin = isLoginValid(login);
-//     console.log(validLogin);
 //     let uniqueLogin = isLoginUnique(allLogins, login);
-//     console.log(uniqueLogin);
-//   // твой код
 //     if (!validLogin) {
 //         msg = "Ошибка! Логин должен быть от 4 до 16 символов";    
 //     } else {
@@ -379,39 +374,39 @@
 
 //task 3
 
-const findBestEmployee = function(employees) {
-  // твой код
+// const findBestEmployee = function(employees) {
+//   // твой код
 
-}
+// }
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(
-  findBestEmployee({
-    ann: 29,
-    david: 35,
-    helen: 1,
-    lorence: 99,
-  }),
-); // lorence
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99,
+//   }),
+// ); // lorence
 
-console.log(
-  findBestEmployee({
-    poly: 12,
-    mango: 17,
-    ajax: 4,
-  }),
-); // mango
+// console.log(
+//   findBestEmployee({
+//     poly: 12,
+//     mango: 17,
+//     ajax: 4,
+//   }),
+// ); // mango
 
-console.log(
-  findBestEmployee({
-    lux: 147,
-    david: 21,
-    kiwi: 19,
-    chelsy: 38,
-  }),
-); // lux
+// console.log(
+//   findBestEmployee({
+//     lux: 147,
+//     david: 21,
+//     kiwi: 19,
+//     chelsy: 38,
+//   }),
+// ); // lux
 
 
 
