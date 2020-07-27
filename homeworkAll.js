@@ -188,7 +188,6 @@
 //task 4
 // const formatString = function(string) {
 //     // твой код
-//     const formatString = function (string) { 
 //         if (string.length < 40) return string; 
 //         return string.slice(0, 40) + "...";
 //   };
@@ -309,3 +308,258 @@
 // console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
 // console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+
+
+
+//module 3
+
+//task 1
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+//   toShowKeys() {
+//     console.log(this.name, this.age, this.hobby, this.premium, this.mood);
+//   }
+// };
+
+// console.log(user);
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.hobby);
+// console.log(user.premium);
+// console.log(user.mood);
+// user.toShowKeys();
+// user.mood = "happy";
+// user.toShowKeys();
+// user.hobby = "skydiving";
+// user.toShowKeys();
+// user.premium = "false";
+// user.toShowKeys();
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log('Value: ', user[key]);
+// }
+
+
+//task 2
+
+// const countProps = function(obj) {
+//   // твой код
+//   name = "Mango";
+//   age = 2;
+//   mail = 'poly@mail.com';
+//   isOnline = true;
+//   score = 500;
+// };
+// const values = Object.values(countProps);
+
+// let total = 0;
+
+// for (const value of values) {
+//   total += countProps;
+// }
+
+// console.log(total);
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(countProps({})); // 0
+
+// console.log(countProps({ name: 'Mango', age: 2 })); // 2
+
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+
+
+
+
+//task 3
+
+const findBestEmployee = function(employees) {
+  // твой код
+
+}
+
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  }),
+); // lorence
+
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  }),
+); // mango
+
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+); // lux
+
+
+
+//task 4
+
+// const countTotalSalary = function(employees) {
+//   // твой код
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(countTotalSalary({})); // 0
+
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
+
+// console.log(
+//   countTotalSalary({
+//     kiwi: 200,
+//     lux: 50,
+//     chelsy: 150,
+//   }),
+// ); // 400
+
+// //task 5
+
+// const countTotalSalary = function(employees) {
+//   // твой код
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(countTotalSalary({})); // 0
+
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
+
+// console.log(
+//   countTotalSalary({
+//     kiwi: 200,
+//     lux: 50,
+//     chelsy: 150,
+//   }),
+// ); // 400
+
+
+// //task 6
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 2 },
+// ];
+
+// const calculateTotalPrice = function(allProdcuts, productName) {
+//   // твой код
+//   const values = Object.values(products);
+
+// let total = 0;
+
+// for (const value of values) {
+//   total += value;
+// }
+
+// console.log(total); // 20
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(calculateTotalPrice(products, 'Радар')); // 5200
+
+// console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+
+
+
+//task 7 - ДОП задание
+/*
+ * Типов транзацкий всего два.
+ * Можно положить либо снять деньги со счета.
+ */
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+
+// /*
+//  * Каждая транзакция это объект со свойствами: id, type и amount
+//  */
+
+// const account = {
+//   // Текущий баланс счета
+//   balance: 0,
+
+//   // История транзакций
+//   transactions: [],
+
+//   /*
+//    * Метод создает и возвращает объект транзакции.
+//    * Принимает сумму и тип транзакции.
+//    */
+//   createTransaction(amount, type) {},
+
+//   /*
+//    * Метод отвечающий за добавление суммы к балансу.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций
+//    */
+//   deposit(amount) {},
+
+//   /*
+//    * Метод отвечающий за снятие суммы с баланса.
+//    * Принимает сумму танзакции.
+//    * Вызывает createTransaction для создания объекта транзакции
+//    * после чего добавляет его в историю транзакций.
+//    *
+//    * Если amount больше чем текущий баланс, выводи сообщение
+//    * о том, что снятие такой суммы не возможно, недостаточно средств.
+//    */
+//   withdraw(amount) {},
+
+//   /*
+//    * Метод возвращает текущий баланс
+//    */
+//   getBalance() {},
+
+//   /*
+//    * Метод ищет и возвращает объект транзации по id
+//    */
+//   getTransactionDetails(id) {},
+
+//   /*
+//    * Метод возвращает количество средств
+//    * определенного типа транзакции из всей истории транзакций
+//    */
+//   getTransactionTotal(type) {},
+// };
