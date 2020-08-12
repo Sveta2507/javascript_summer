@@ -62,4 +62,62 @@ createItems(images);
 
 //task 4
 
+const counterValue = document.querySelector("#value");
+const value1 = document.querySelector('[data-action="increment"]');
+const value2 = document.querySelector('[data-action="decrement"]');
 
+let number = Number(counterValue.textContent);
+
+value1.addEventListener("click", increment);
+value2.addEventListener("click", decrement);
+
+function increment(event) {
+  number += 1;
+  counterValue.textContent = number;
+}
+
+function decrement(event) {
+  if (number > 0) {
+    number -= 1;
+    counterValue.textContent = number;
+  }
+}
+
+// task 5
+
+const input = document.querySelector("input#name-input");
+
+const title = document.querySelector("span#name-output");
+
+input.addEventListener("input", (event) => {
+  title.textContent = event.target.value;
+});
+
+// task 6
+
+const inputUsual = document.querySelector("#validation-input");
+const validInput = document.querySelector('[data-length="6"]');
+let dataLength = Number(validInput.dataset.length);
+
+inputUsual.addEventListener("blur", (event) => {
+  let letters = Number(event.target.value.length);
+
+  if (dataLength !== letters) {
+    inputUsual.classList.add("invalid");
+  } else if (dataLength === letters) {
+    inputUsual.classList.replace("invalid", "valid");
+  }
+});
+
+// task 7
+
+const input1 = document.querySelector("input#font-size-control");
+
+const text = document.querySelector("span#text");
+
+console.log(text.style);
+input1.addEventListener("input", (event) => {
+  text.style.fontSize = input1.value + "px";
+});
+
+// task 8 - ДОП задание
