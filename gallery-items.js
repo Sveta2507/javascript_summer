@@ -3,9 +3,11 @@
 export default [
   {
     preview:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825__340.jpg",
+      // "https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825__340.jpg",
+      "https://images.pexels.com/photos/3755273/pexels-photo-3755273.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     original:
-      "https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825_1280.jpg",
+      //   "https://cdn.pixabay.com/photo/2019/05/14/16/43/hokkaido-4202825_1280.jpg",
+      "https://images.pexels.com/photos/3755273/pexels-photo-3755273.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Hokkaido Flower",
   },
   {
@@ -17,9 +19,11 @@ export default [
   },
   {
     preview:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785__340.jpg",
+      // "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785__340.jpg",
+      "https://images.pexels.com/photos/4845272/pexels-photo-4845272.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     original:
-      "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg",
+      // "https://cdn.pixabay.com/photo/2019/05/16/09/47/view-4206785_1280.jpg",
+      "https://images.pexels.com/photos/4845272/pexels-photo-4845272.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     description: "Aerial Beach View",
   },
   {
